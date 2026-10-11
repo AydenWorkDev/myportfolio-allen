@@ -208,19 +208,16 @@ nav{
     display: flex;
     justify-content: flex-start;
     text-align: left;
-    color: var(--text-color-third);
 }
 
 .featured-text-btn .btn {
-    display: inline-flex;
     align-items: center;
-    gap: 8px;
-}
-
-.featured-text-btn>.blue-btn{
+    border-radius: 20px;
     background: var(--first-color);
     color: var(--color-white);
+    text-decoration: none;
 }
+
 .featured-text-btn>.blue-btn:hover{
     background: var(--first-color-hover);
 }
@@ -339,7 +336,7 @@ h3{
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box {
-    width: 510px;
+    width: 560px;
     height: 560px;
     box-sizing: border-box;
 
@@ -425,6 +422,8 @@ h3{
     border-radius: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
 }
 .portfolio-box>i{
     font-size: 50px;
@@ -435,6 +434,8 @@ h3{
     font-size: 15px;
     color: #777;
 }
+
+
 .portfolio-box::after, .contact-info::after{
     content: "";
     position: absolute;
