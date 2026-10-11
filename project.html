@@ -9,8 +9,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-   <!--CSS-->
-  <style>
+</head>
+<body>
+
+     <!--logo-->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo">AydenWorkDev</a>
+      <ul>
+        <li><a href="project.html" aria-current="page">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!--Project Image-->
+  <main>
+    <section class="page-head">
+      <h1>My Projects</h1>
+      <p>Explore my programming and development projects.</p>
+    </section>
+
+    <section class="grid" aria-label="Projects">
+
+      <article class="card">
+        <div class="thumb"><img src="images-project/myportfolio-website.jpg" alt="Personal Website-Portfolio screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
+        <div class="card-body">
+          <h2>Personal Website-Portfolio</h2>
+          <p>This portfolio showcases my skills, projects, and knowledge developed through self-study and personal learning. 
+            All designs and content are my own creations as 3rd year, BSIT student .</p>
+          <p>Disclaimer!!!</p>
+          <p>The information presented is based on reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><img src="images-project/Shoe Store Website-Design.jpg" alt="Shoe Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-shoe-prints" aria-hidden="true" style="display:none"></i></div>
+        <div class="card-body">
+          <h2>Shoe Store Web-Design</h2>
+          <p>A shoe store website showcasing different styles of footwear through a simple and user-friendly design.</p>
+          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          <div class="tags"><span class="tag">Figma</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><img src="images-project/PC-Store.jpg" alt="PC Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-desktop" aria-hidden="true" style="display:none"></i></div>
+        <div class="card-body">
+          <h2>PC Store Web-Design</h2>
+          <p>PC Store website showcasing computer parts, accessories, and PC builds as part of an academic project.</p>
+          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p> 
+          <div class="tags"><span class="tag">Figma</span></div>
+        </div>
+      </article>
+
+    </section>
+
+     <!-- Button to Back-->
+    <div class="actions">
+      <a href="index.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home</a>
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer class="site-footer">
+    <h3>Cris Allen</h3>
+    <ul class="footer-nav">
+      <li><a href="project.html">Projects</a></li>
+    </ul>
+  <div class="social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+            <div class="copy">
+                 </p>Copyright © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.<p>
+            </div>
+        </footer>
+
+     <!--CSS-->   
+<style>
     :root {
       --bg: #f8fafc;
       --surface: #ffffff;
@@ -130,86 +208,10 @@
       * { transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
-</head>
-<body>
-
-     <!--logo-->
-  <header class="site-header">
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" class="logo">AydenWorkDev</a>
-      <ul>
-        <li><a href="project.html" aria-current="page">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
-
-   <!--Project Image-->
-  <main>
-    <section class="page-head">
-      <h1>My Projects</h1>
-      <p>Explore my programming and development projects.</p>
-    </section>
-
-    <section class="grid" aria-label="Projects">
-
-      <article class="card">
-        <div class="thumb"><img src="images-project/myportfolio-website.jpg" alt="Personal Website-Portfolio screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
-        <div class="card-body">
-          <h2>Personal Website-Portfolio</h2>
-          <p>This portfolio showcases my skills, projects, and knowledge developed through self-study and personal learning. 
-            All designs and content are my own creations as 3rd year, BSIT student .</p>
-          <p>Disclaimer!!!</p>
-          <p>The information presented is based on reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb"><img src="images-project/Shoe Store Website-Design.jpg" alt="Shoe Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-shoe-prints" aria-hidden="true" style="display:none"></i></div>
-        <div class="card-body">
-          <h2>Shoe Store Web-Design</h2>
-          <p>A shoe store website showcasing different styles of footwear through a simple and user-friendly design.</p>
-          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
-          <div class="tags"><span class="tag">Figma</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb"><img src="images-project/PC-Store.jpg" alt="PC Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-desktop" aria-hidden="true" style="display:none"></i></div>
-        <div class="card-body">
-          <h2>PC Store Web-Design</h2>
-          <p>PC Store website showcasing computer parts, accessories, and PC builds as part of an academic project.</p>
-          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p> 
-          <div class="tags"><span class="tag">Figma</span></div>
-        </div>
-      </article>
-
-    </section>
-
-     <!-- Button to Back-->
-    <div class="actions">
-      <a href="index.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home</a>
-    </div>
-  </main>
-
-  <!--Footer-->
-  <footer class="site-footer">
-    <h3>Cris Allen</h3>
-    <ul class="footer-nav">
-      <li><a href="project.html">Projects</a></li>
-    </ul>
-  <div class="social">
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    </div>
-            <div class="copy">
-                 </p>Copyright © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.<p>
-            </div>
-        </footer>
-
         
-         <!--JavaScript-->
+
+
+ <!--JavaScript-->
   <script>
     // Show an icon placeholder when a screenshot is missing
     document.querySelectorAll('.thumb').forEach(function (t) {
