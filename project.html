@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | My Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <title>Projects | My Portfolio</title>
 </head>
 <body>
 
      <!--logo-->
   <header class="site-header">
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" class="logo">AydenWorkDev</a>
-      <ul>
-        <li><a href="project.html" aria-current="page">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html" class="logo">AydenWorkDev</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="certificate.html">Certificates</a></li>
+      <li><a href="experience.html">Experiences</a></li>
+    </ul>
+  </nav>
+</header>
 
    <!--Project Image-->
   <main>
     <section class="page-head">
       <h1>My Projects</h1>
-      <p>Explore my academic projects, programming practice, and personal development work..</p>
+      <p>Explore my programming and web development projects.</p>
     </section>
 
     <section class="grid" aria-label="Projects">
 
       <article class="card">
-        <div class="thumb"><img src="images-project/myportfolio-website.jpg" alt="Personal Website-Portfolio screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
+        <div class="thumb"><img src="images-project/projectPorfolio.jpg" alt="Personal Website-Portfolio screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
         <div class="card-body">
           <h2>Personal Website-Portfolio</h2>
           <p>This portfolio showcases my skills, projects, and knowledge developed through self-study and personal learning. 
             All designs and content are my own creations as 3rd year, BSIT student .</p>
-          <p>Disclaimer!!!</p>
+          <strong>Disclaimer!!!</strong> 
           <p>The information presented is based on reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
           <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
         </div>
       </article>
+
+       <article class="card">
+        <div class="thumb"><img src="images-project/Queuing TP.jpg" alt="Queue Activity screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
+        <div class="card-body">
+          <h2>Basic Queuing</h2>
+          <p>We Developed as a practical task performance for school laboratory work, this application demonstrates the fundamental principles of data structures and process management. 
+             using a First-In, First-Out (FIFO) logic model</p>
+          <strong>Disclaimer!!</strong> 
+          <p>This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          <div class="tags"><span class="tag">C#</span><span class="tag">.NET-Windows Form</span>
+        </div>
+      </article>
+
+      <!--
+      <article class="card">
+        <div class="thumb"><img src="images-project/" alt="Login and Signup Forms screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
+        <div class="card-body">
+          <h2>Login and Signup Forms</h2>
+          <p>This Project its my own creation by on my skills and learning about SQL and C# windows forms Application</p>
+          <strong>Disclaimer!!</strong>
+          <p>The Login and Signup is  presented is based on reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
+          <div class="tags"><span class="tag">C#</span><span class="tag">.NET (Windows Form)</span><span class="tag">SQL</span>
+        </div>
+      </article>
+       -->
 
       <article class="card">
         <div class="thumb"><img src="images-project/Shoe Store Website-Design.jpg" alt="Shoe Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-shoe-prints" aria-hidden="true" style="display:none"></i></div>
         <div class="card-body">
           <h2>Shoe Store Web-Design</h2>
           <p>A shoe store website showcasing different styles of footwear through a simple and user-friendly design.</p>
-          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          <strong>Disclaimer!!</strong>
+          <p>This Shoe Store website design was developed as part of school activities for educational purposes only. 
+            All information and content are for academic purposes.</p>
           <div class="tags"><span class="tag">Figma</span></div>
         </div>
       </article>
@@ -58,12 +90,14 @@
         <div class="card-body">
           <h2>PC Store Web-Design</h2>
           <p>PC Store website showcasing computer parts, accessories, and PC builds as part of an academic project.</p>
-          <p>Disclaimer!!! - This website was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p> 
+          <strong>Disclaimer!!</strong>
+          <p>This PC store website design was developed as part of school activities for educational purposes only.
+             All information and content are for academic purposes.</p>
           <div class="tags"><span class="tag">Figma</span></div>
         </div>
       </article>
 
-    </section>
+    </section> <!--End of the section-->
 
      <!-- Button to Back-->
     <div class="actions">
@@ -73,21 +107,25 @@
 
   <!--Footer-->
   <footer class="site-footer">
-    <h3>Cris Allen</h3>
+    <h3>Cris Allen 💜</h3>
     <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
       <li><a href="project.html">Projects</a></li>
+      <li><a href="certificate.html">Certificates</a></li>
+      <li><a href="experience.html">Experiences</a></li>
     </ul>
   <div class="social">
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/crslln" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
     </div>
             <div class="copy">
-                 </p>Copyright © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.<p>
+                 </p> © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.<p>
             </div>
         </footer>
 
-     <!--CSS-->   
+
+<!--CSS-->   
 <style>
     :root {
       --bg: #f8fafc;
@@ -127,8 +165,8 @@
     }
     .logo { font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em; color: var(--brand); }
     .nav ul { display: flex; gap: 28px; list-style: none; }
-    .nav ul a { font-size: .95rem; font-weight: 500; color: var(--muted); padding: 6px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
-    .nav ul a:hover, .nav ul a[aria-current="page"] { color: var(--ink); border-color: var(--brand); }
+    .nav ul a { font-size: .95rem; font-weight: 500; color: var(--muted); padding: 6px 0; transition: color .2s;}
+    .nav ul a:hover, .nav ul a[aria-current="page"] {color: var(--brand); }
 
     /* Hero */
     .page-head { text-align: center; padding: 72px 24px 40px; max-width: 720px; margin: 0 auto; color: var(--brand); }
@@ -164,12 +202,12 @@
 
     .card-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
     .card-body h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; }
-    .card-body p { color: var(--muted); font-size: .95rem; flex: 1; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .card-body p { color: var(--muted); font-size: .95rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
     .tag {
       font-size: .8rem; font-weight: 600; color: var(--brand-dark);
       background: var(--brand-soft); border: 1px solid #dbeafe;
-      padding: 4px 12px; border-radius: 999px;
+      padding: 6px 16px; border-radius: 999px;
     }
 
     /* Back button */
@@ -200,10 +238,40 @@
     .social a:hover { color: #fff; background: var(--brand); border-color: var(--brand); }
     .copy { color: var(--muted); font-size: .875rem; }
 
-    @media (max-width: 600px) {
-      .nav ul { gap: 16px; }
-      .page-head { padding-top: 48px; }
-    }
+    /* menu ☰ */
+  .menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.4rem;
+  color: var(--brand);
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+@media (max-width: 700px) {
+  .menu-toggle { display: block; }
+
+  .nav { position: relative; }
+
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 24px 16px;
+  }
+
+  .nav ul.open { display: flex; }
+  .nav ul a { display: block; padding: 12px 0; }
+  .page-head { padding-top: 48px; }
+}
+
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; scroll-behavior: auto !important; }
     }
@@ -225,6 +293,27 @@
 
     // Every year change the year on Copyright
     document.getElementById("year").textContent = new Date().getFullYear();
+
+     // Mobile menu
+  var menuToggle = document.getElementById("menuToggle");
+  var navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", function () {
+    var isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+
+  // Highlight the link of the page you are on
+  var currentPage = location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll("#navLinks a").forEach(function (link) {
+    if (link.getAttribute("href") === currentPage) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
   </script>
 
 </body>
