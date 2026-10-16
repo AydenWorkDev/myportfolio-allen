@@ -1,122 +1,64 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
-function myMenuFunction(){
-  let menuBtn = document.getElementById("myNavMenu");
+/* ----- MOBILE MENU ----- */
+var menuToggle = document.getElementById("menuToggle");
+var navLinks = document.getElementById("navLinks");
 
-  if(menuBtn.className === "nav-menu"){
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
-  }
+function setMenu(open) {
+  navLinks.classList.toggle("open", open);
+  menuToggle.setAttribute("aria-expanded", open);
+  menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  menuToggle.innerHTML = open
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
 }
 
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-window.onscroll = function() {headerShadow()};
+menuToggle.addEventListener("click", function () {
+  setMenu(!navLinks.classList.contains("open"));
+});
 
-function headerShadow() {
-  const navHeader =document.getElementById("header");
+// Close the menu after tapping a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () { setMenu(false); });
+});
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+/* ----- HIGHLIGHT THE LINK OF THE SECTION YOU ARE ON ----- */
+var sections = document.querySelectorAll("section[id]");
+var links = document.querySelectorAll("#navLinks a");
 
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
+function scrollActive() {
+  var scrollY = window.scrollY + 120;
+  var current = "home";
 
-  } else {
+  sections.forEach(function (section) {
+    if (scrollY >= section.offsetTop) current = section.id;
+  });
 
-    navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
-
-  }
+  links.forEach(function (link) {
+    if (link.getAttribute("href") === "#" + current) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
 }
-/* ----- Download Resume----- */
-function downloadResume() {
-    const link = document.createElement('a');
-    link.href = 'CV/Resume.pdf';
-    link.download = 'Resume.pdf';
-    link.click();
-}
-
-/* ----- Every year change the year on Copyright----- */
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-const sr = ScrollReveal({
-      origin: 'top',
-      distance: '80px',
-      duration: 2000,
-      reset: true     
-})
+window.addEventListener("scroll", scrollActive);
+scrollActive();
 
 /* ----- TYPING EFFECT ----- */
-let typingEffect = new Typed(".typedText",{
-  strings :["Student","Cris Allen"],
-  loop : true,
-  typeSpeed : 100, 
-  backSpeed : 80,
-  backDelay : 2000
-})
+new Typed(".typedText", {
+  strings: ["Cris Allen","BSIT Student","3rd year"],
+  loop: true,
+  typeSpeed: 100,
+  backSpeed: 80,
+  backDelay: 2000
+});
 
-
-/* -- HOME -- */
-sr.reveal('.featured-text-card',{})
-sr.reveal('.featured-name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
-sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
-
-/* -- PROJECT BOX -- */
-sr.reveal('.project-box',{interval: 200})
-
-/* -- HEADINGS -- */
-sr.reveal('.top-header',{})
-
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-
-/* -- ABOUT INFO & CONTACT INFO -- */
-const srLeft = ScrollReveal({
-origin: 'left',
-distance: '80px',
-duration: 2000,
-reset: true
-})
-
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-const srRight = ScrollReveal({
-origin: 'right',
-distance: '80px',
-duration: 2000,
-reset: true
-})
-
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
-
-/* ----- CHANGE ACTIVE LINK ----- */
-
-const sections = document.querySelectorAll('section[id]')
-function scrollActive() {
-const scrollY = window.scrollY;
-
-sections.forEach(current =>{
-  const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 50,
-    sectionId = current.getAttribute('id')
-
-  if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
-
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
-
-  }  else {
-
-    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
-
-  }
-})
+/* ----- DOWNLOAD RESUME ----- */
+function downloadResume() {
+  var link = document.createElement("a");
+  link.href = "resume/resume.pdf";
+  link.download = "Cris Allen_Resume.pdf";
+  link.click();
 }
 
-window.addEventListener('scroll', scrollActive)
+/* ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- */
+document.getElementById("year").textContent = new Date().getFullYear();
