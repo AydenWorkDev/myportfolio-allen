@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cris Allen | Portfolio</title>
 </head>
-<body>
 
+
+<body>
   <!--logo + menu-->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a href="#home" class="logo">AydenWorkDev</a>
+      <a href="#home" class="logo"><span></span> AydenWorkDev</a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
@@ -26,6 +27,11 @@
         <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+   
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
     </nav>
   </header>
 
@@ -35,21 +41,17 @@
       <div class="hero-text">
         <span class="tag">Welcome</span>
         <h1>Hello, I'm <span class="typedText"></span></h1>
-        <p>Hi! I’m currently in my 3rd year of BS Information Technology Student, passionate about technology, programming, and web development.
-          I enjoy creating projects, learning new skills, and exploring how technology can solve real-world problems.
-          I’m continuously improving my skills as I prepare for a future career in the IT industry.</p>
+        <p class="hero-desc">Hi! I’m an IT student passionate about technology, programming, and computer hardware. 
+          I enjoy creating projects, learning new skills, and exploring how technology can solve real-world problems. 
+          I’m also interested in computer hardware troubleshooting, including diagnosing PC issues and performing basic computer repairs. 
+          I’m continuously improving my technical skills as I prepare for a future career in the IT industry.</p>
 
         <div class="hero-actions">
-          <a href="resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn">View Resume <i class="fa-solid fa-file-lines" aria-hidden="true"></i></a>
+          <a href="resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn">View Resume <i
+              class="fa-solid fa-file-lines" aria-hidden="true"></i></a>
         </div>
 
-        <div class="social">
-          <a href="https://facebook.com/crslln" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-
+      </div> 
       <div class="hero-image">
         <div class="image">
           <img src="Profile/Transparent-Profile.png" alt="Profile picture">
@@ -57,100 +59,131 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+   <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
       <div class="section-head">
         <h2>About Me</h2>
-        <p>A little about who I am and what I can do.</p>
+        <p>Get to know me, explore my technical skills, and learn about my educational background.</p>
       </div>
 
       <div class="about-grid">
 
+        <!-- Who I Am -->
         <article class="panel">
-          <h3>Who I Am</h3>
-          <p>Hi! I’m Cris Allen a 3rd-year student in Bachelor of Science in Information Technology (BSIT) student with a passion for technology, programming, and creative digital projects.
-            I am continuously developing my skills near future web development, web design, and problem-solving through school activities, academic projects, coursework, and self directed learning.
-            My knowledge and practical experience are based on the programming languages, tools, and technologies I have learned and applied throughout my studies,
-            I have independently learned and practiced HTML, CSS, and JavaScript through self study and personal web development projects.
-            Through these experiences, I have gained foundational knowledge and hands-on practice in creating programs, designing websites, working with databases, and developing practical solutions to different challenges.
-            I am eager to learn new technologies, strengthen my technical abilities, and improve through continuous practice and personal projects.
-            My goal is to build a career in the IT industry where I can apply the knowledge and skills I have gained as a student, gain further experience, and contribute to developing useful and user friendly technology solutions.</p>
+          <h3><i class="fa-solid fa-user" aria-hidden="true"></i> Who I Am</h3>
 
-          <button class="btn" type="button" onclick="downloadResume()
-          ">Download Resume<i class="fa-solid fa-download" aria-hidden="true"></i></button>
+          <p>Current a 3rd-year Bachelor of Science in Information Technology (BSIT) student with
+            a passion for technology, programming, computer hardware service and creative digital projects. 
+            I am continuously developing my skills in web development, web design, and problem-solving through 
+            school activities, academic projects, coursework, and self-directed learning.</p>
+
+          <p>My goal is to build a career in the IT industry where I can apply the knowledge and skills I have gained
+            as a student, gain further experience, and contribute to developing useful and user-friendly technology
+            solutions.</p>
+
+          <button class="btn" type="button" onclick="downloadResume()">Download Resume <i
+              class="fa-solid fa-download" aria-hidden="true"></i></button>
         </article>
 
-        <article class="panel">
-          <h3>Skills</h3>
+          <!-- Education -->
+          <article class="panel education-panel">
+            <h3><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
 
-          <div class="skills-grid">
-
-            <!-- Web Development -->
-            <div class="skill-group">
-              <h4>Web Development</h4>
-              <div class="skills-list">
-               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" title="Html5"/>
-               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="CSS3"/>
-               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" title="JavaScript"/>
-               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original-wordmark.svg" title=".NET"/>
+            <div class="edu-list">
+              <div class="edu-item">
+                <h4>Bachelor of Science in Information Technology (BSIT)</h4>
+                <p class="edu-school">STI COLLEGE TANAY</p>
+                <span class="edu-year">2024 – Present</span>
               </div>
-            </div>
 
-            <!-- Programming Languages -->
-            <div class="skill-group">
-              <h4>Programming Languages</h4>
-              <div class="skills-list">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" title="Java"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" title="C#" />
+              <div class="edu-item">
+                <h4>Senior High School (ICT-Strand)</h4>
+                <p class="edu-school">PHILTECH TANAY</p>
+                <span class="edu-year">2021 – 2023</span>
               </div>
-            </div>
 
-            <!-- Web Design -->
-            <div class="skill-group">
-              <h4>Web Design</h4>
-              <div class="skills-list">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" title="Figma" />
-
+            <div class="edu-item">
+                <h4>Junior High School</h4>
+                <p class="edu-school">TANAY NATIONAL HIGH SCHOOL</p>
+                <span class="edu-year">2017 – 2021</span>
               </div>
-            </div>
+          </article>
 
-               <!-- Database -->
-            <!-- <div class="skill-group">
-              <h4>Database</h4>
-              <div class="skills-list">
-               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" title="SQL" />
-              </div>
-            </div> -->
+          <!-- Technical Skills -->
+          <article class="panel">
+            <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Technical Skills</h3>
 
-             <div class="skill-group">
-              <h4>Development Tools</h4>
-              <div class="skills-list">
-                <!-- <img src="logo/Word_Logo.svg" title="Microsoft Word">
-                <img src="logo/Excel_Logo.svg" title="Microsoft Excel">
-                <img src="logo/PowerPoint_Logo.svg" title="Microsoft PowerPoint">    -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" title="Visual Studio">
-                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" title="VS Code">
-              </div>
-            </div>
-            
-             <!-- <div class="skill-group">
-              <h4>Office Productivty</h4>
-              <div class="skills-list">
-                <!-- <img src="logo/Word_Logo.svg" title="Microsoft Word">
-                <img src="logo/Excel_Logo.svg" title="Microsoft Excel">
-                <img src="logo/PowerPoint_Logo.svg" title="Microsoft PowerPoint"> 
-              </div>
-            </div> -->
-        </article>
+            <div class="skills-grid">
 
-      </div>
+              <!-- Web Development -->
+              <div class="skill-group">
+                <h4>Web Development</h4>
+                <div class="skills-list">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    title="HTML5" alt="HTML5" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    title="CSS3" alt="CSS3" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                    title="JavaScript" alt="JavaScript" />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original-wordmark.svg"
+                    title=".NET" alt=".NET" />
+                </div>
+              </div>
+
+              <!-- Programming Languages -->
+              <div class="skill-group">
+                <h4>Programming Languages</h4>
+                <div class="skills-list">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"
+                    title="Java" alt="Java" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                    title="C#" alt="C#" />
+                </div>
+              </div>
+
+              <!-- Development Tools -->
+              <div class="skill-group">
+                <h4>Development Tools</h4>
+                <div class="skills-list">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"
+                    title="Visual Studio" alt="Visual Studio" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                    title="VS Code" alt="VS Code" />
+                </div>
+              </div>
+
+
+              <!-- Web Design -->
+              <div class="skill-group">
+                <h4>Web Design</h4>
+                <div class="skills-list">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    title="Figma" alt="Figma" />
+                </div>
+              </div>
+
+              <!-- Office Productivity -->
+              <!-- <div class="skill-group">
+                <h4>Office Productivity</h4>
+                <div class="skills-list">
+                  <img src="logo/Word_Logo.svg" title="Microsoft Word" alt="Microsoft Word" />
+                  <img src="logo/Excel_Logo.svg" title="Microsoft Excel" alt="Microsoft Excel" />
+                  <img src="logo/PowerPoint_Logo.svg" title="Microsoft PowerPoint" alt="Microsoft PowerPoint" />
+                </div>
+              </div> -->
+
+            </div><!-- /skills-grid -->
+          </article>
+      </div><!-- /about-grid -->
     </section>
+
 
     <!-- ===== PORTFOLIO ===== -->
     <section class="section" id="portfolio">
       <div class="section-head">
         <h2>Portfolio</h2>
-        <p>My projects, certificates, and experiences in one place.</p>
+        <p>All rojects, certificates, and experiences in one place.</p>
       </div>
 
       <div class="grid">
@@ -170,8 +203,8 @@
           <div class="card-head"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
           <div class="card-body">
             <h3>Certificates</h3>
-            <p>Courses, trainings, and seminars I have completed.</p>
-            <span class="card-link">View Certificates <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            <p>Courses, Trainings, and Seminars I have completed.</p>
+            <span class="card-link">View Certificates<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </div>
         </a>
 
@@ -181,7 +214,7 @@
           <div class="card-body">
             <h3>Experiences</h3>
             <p>My internship and work experience.</p>
-            <span class="card-link">View Experiences <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            <span class="card-link">View Experiences<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </div>
         </a>
 
@@ -196,16 +229,31 @@
       </div>
 
       <article class="panel contact-card">
-        <h3>Find Me</h3>
-
-        <a class="contact-item" href="emailto:crisallentica@gmail.com">
+        <h3>Contact Me</h3>
+      
+        <a class="contact-item" href="emailto: crisallentica@gmail.com">
           <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
           <span>crisallentica@gmail.com</span>
         </a>
-
+      
         <a class="contact-item" href="tel:+639663694347">
           <span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
           <span>+63 9663694347</span>
+        </a>
+      
+        <a class="contact-item" href="https://facebook.com/crslln" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span>
+          <span>Facebook</span>
+        </a>
+      
+        <a class="contact-item" href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+          <span>Instagram</span>
+        </a>
+      
+        <a class="contact-item" href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+          <span>GitHub</span>
         </a>
       </article>
     </section>
@@ -214,18 +262,15 @@
 
   <!--Footer-->
   <footer class="site-footer">
-    <h3>Philippian 4:13 💜</h3>
+    <h3>Philippian 4:13</h3>
+    <h3>Isaiah 60:22 💜</h3>
     <ul class="footer-nav">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="social">
-      <a href="https://www.facebook.com/crslln" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    </div>
+    
     <div class="copy">
       <p> © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.</p>
     </div>
@@ -234,4 +279,5 @@
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
