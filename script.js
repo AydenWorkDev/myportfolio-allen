@@ -60,17 +60,5 @@ function downloadResume() {
   link.click();
 }
 
-// ===== Dark mode toggle =====
-const themeBtn = document.getElementById("themeBtn");
-
-if (themeBtn) {
-  themeBtn.addEventListener("click", () => {
-    const root = document.documentElement;
-    const next = root.dataset.theme === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch (e) {}
-  });
-}
-
 /* ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- */
 document.getElementById("year").textContent = new Date().getFullYear();
