@@ -1,0 +1,46 @@
+/* ----- Theme button ----- */
+.theme-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  margin-left: 20px;
+  border: 0; border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.theme-btn:hover { background: rgba(127,127,127,.18); transform: rotate(15deg); }
+.theme-btn .fa-sun { display: none; }
+
+html[data-theme="dark"] .theme-btn .fa-moon { display: none; }
+html[data-theme="dark"] .theme-btn .fa-sun { display: inline; color: #fbbf24; }
+
+@media (max-width: 700px) {
+  .theme-btn { order: 1; margin-left: 0; }
+  .menu-toggle { order: 2; }
+}
+
+/* ----- Dark theme ----- */
+html[data-theme="dark"] {
+  --bg: #0b1120;
+  --surface: #111a2e;
+  --ink: #e5e7eb;
+  --muted: #94a3b8;
+  --line: #1f2a44;
+  --brand: #5b8cff;
+  --brand-dark: #7aa2ff;
+  --brand-soft: rgba(91, 140, 255, .15);
+  color-scheme: dark;
+  scrollbar-color: #334155 #0b1120;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-track { background: #0b1120; }
+html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #334155; }
+
+/* Hard-coded colors that variables don't cover */
+html[data-theme="dark"] .site-header { background: rgba(17, 26, 46, .9); }
+html[data-theme="dark"] .image { background: var(--surface); border-color: var(--line); }
+html[data-theme="dark"] .tag { border-color: var(--line); }
+html[data-theme="dark"] .card-head { background: linear-gradient(135deg, #1e2a4a, #111a2e); }
+html[data-theme="dark"] .card:hover { border-color: #334155; box-shadow: 0 16px 32px -12px rgba(91,140,255,.25); }
+html[data-theme="dark"] .skills-list img { background: #e2e8f0; border-radius: 8px; padding: 4px; }
