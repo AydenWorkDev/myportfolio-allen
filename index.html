@@ -365,6 +365,19 @@
         document.documentElement.setAttribute("data-theme", saved || system);
       } catch (e) {}
     })();
+
+  (function () {
+    var nav = performance.getEntriesByType("navigation")[0];
+    var type = nav ? nav.type : "navigate";
+    var skip = false;
+    try {
+      var flag = sessionStorage.getItem("skipLoader") === "1";
+      var own = !!document.referrer && new URL(document.referrer).origin === location.origin;
+      skip = type !== "reload" && (flag || own || type === "back_forward");
+      sessionStorage.removeItem("skipLoader");
+    } catch (e) {}
+    if (skip) document.documentElement.classList.add("no-loader");
+  })();
     </script>
 </body>
 </html>
