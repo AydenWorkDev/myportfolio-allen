@@ -6,21 +6,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="styles.css">
-    <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var system = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", saved || system);
-      } catch (e) {}
-    })();
-    </script>
     <link rel="stylesheet" href="darkmode.css">
     <title>Cris Allen | Portfolio</title>
 </head>
 
 <body>
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-code">&lt;/&gt;</span>
+        <span class="loader-brand">AydenWorkDev</span>
+        <span class="loader-sep">|</span>
+        <span class="loader-name">Cris Allen</span>
+      </div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
   <!--logo + menu-->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
@@ -191,7 +196,7 @@
     <section class="section" id="portfolio">
       <div class="section-head">
         <h2>Portfolio</h2>
-        <p>All rojects, certificates, and experiences in one place.</p>
+        <p>All Projects, certificates, and experiences in one place.</p>
       </div>
 
       <div class="grid">
@@ -239,7 +244,7 @@
       <article class="panel contact-card">
         <h3>Contact Me</h3>
       
-        <a class="contact-item" href="emailto: crisallentica@gmail.com">
+        <a class="contact-item" href="mailto: crisallentica@gmail.com">
           <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
           <span>crisallentica@gmail.com</span>
         </a>
@@ -287,6 +292,14 @@
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="script.js"></script>
   <script src="Theme.js"></script>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var system = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", saved || system);
+      } catch (e) {}
+    })();
+    </script>
 </body>
-
 </html>
