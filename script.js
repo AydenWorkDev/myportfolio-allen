@@ -64,12 +64,32 @@ function downloadResume() {
 // ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ===== Loading screen (all devices, every load) =====
+// ===== Loading screen =====
 (function () {
   var loader = document.getElementById("loader");
   if (!loader) return;
 
-  var MIN_TIME = 1800;                 // show for at least 1.8 seconds
+  // Remember when the visitor leaves for another page of my site
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[href]");
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || a.target === "_blank") return;
+    var href = a.getAttribute("href");
+    if (!href || href.charAt(0) === "#" || /^(mailto:|tel:)/i.test(href)) return;
+    try {
+      var url = new URL(a.href, location.href);
+      if (url.origin === location.origin && url.pathname !== location.pathname) {
+        sessionStorage.setItem("skipLoader", "1");
+      }
+    } catch (err) {}
+  });
+
+  // Coming back from Projects, Certificates, or Experience: skip the loader
+  if (document.documentElement.classList.contains("no-loader")) {
+    loader.remove();
+    return;
+  }
+
+  var MIN_TIME = 1800;
   var start = Date.now();
   document.body.classList.add("is-loading");
 
