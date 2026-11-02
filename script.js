@@ -89,7 +89,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
     return;
   }
 
-  var MIN_TIME = 1800;
+  var MIN_TIME = 2800;
   var start = Date.now();
   document.body.classList.add("is-loading");
 
