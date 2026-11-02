@@ -416,6 +416,7 @@ main { flex: 1; }
 .loader-code,
 .loader-brand { color: var(--brand); }
 .loader-sep { color: var(--muted); font-weight: 400; }
+.no-loader .loader { display: none; }
 
 .loader-bar {
   width: min(260px, 70vw);
