@@ -45,7 +45,7 @@ scrollActive();
 
 /* ----- TYPING EFFECT ----- */
 new Typed(".typedText", {
-  strings: ["Cris Allen","BSIT Student","3rd year"],
+  strings: ["BSIT Student","3rd year"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -60,5 +60,28 @@ function downloadResume() {
   link.click();
 }
 
-/* ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- */
+
+// ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ===== Loading screen (all devices, every load) =====
+(function () {
+  var loader = document.getElementById("loader");
+  if (!loader) return;
+
+  var MIN_TIME = 1800;                 // show for at least 1.8 seconds
+  var start = Date.now();
+  document.body.classList.add("is-loading");
+
+  function closeLoader() {
+    var wait = Math.max(0, MIN_TIME - (Date.now() - start));
+    setTimeout(function () {
+      loader.classList.add("hide");
+      document.body.classList.remove("is-loading");
+      setTimeout(function () { loader.remove(); }, 600);
+    }, wait);
+  }
+
+  if (document.readyState === "complete") closeLoader();
+  else window.addEventListener("load", closeLoader);
+})();
