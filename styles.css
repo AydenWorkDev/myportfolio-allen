@@ -432,7 +432,7 @@ main { flex: 1; }
   width: 0;
   background: var(--brand);
   border-radius: 999px;
-  animation: loaderBar 1.6s ease-in-out forwards;
+  animation: loaderBar 2.8s ease-in-out forwards;
 }
 
 .loader-text {
