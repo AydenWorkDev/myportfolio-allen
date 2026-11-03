@@ -371,10 +371,11 @@
     var type = nav ? nav.type : "navigate";
     var skip = false;
     try {
-      var flag = sessionStorage.getItem("skipLoader") === "1";
+      var t = parseInt(sessionStorage.getItem("skipLoaderAt") || "0", 10);
+      var fresh = t && (Date.now() - t) < 10 * 60 * 1000; // flag valid for 10 minutes
       var own = !!document.referrer && new URL(document.referrer).origin === location.origin;
-      skip = type !== "reload" && (flag || own || type === "back_forward");
-      sessionStorage.removeItem("skipLoader");
+      skip = type !== "reload" && fresh && (own || type === "back_forward");
+      sessionStorage.removeItem("skipLoaderAt");
     } catch (e) {}
     if (skip) document.documentElement.classList.add("no-loader");
   })();
