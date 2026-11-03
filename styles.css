@@ -432,8 +432,9 @@ main { flex: 1; }
   width: 0;
   background: var(--brand);
   border-radius: 999px;
-  animation: loaderBar 2.8s ease-in-out forwards;
+  animation: none; width: 0;
 }
+body.is-loading .loader-bar span { animation: loaderBar 1.6s ease-in-out forwards; }
 
 .loader-text {
   color: var(--muted);
