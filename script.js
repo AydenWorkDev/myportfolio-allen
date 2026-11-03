@@ -64,6 +64,7 @@ function downloadResume() {
 // ----- EVERY YEAR CHANGE THE YEAR ON COPYRIGHT ----- 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+
 // ===== Loading screen =====
 (function () {
   var loader = document.getElementById("loader");
@@ -78,30 +79,45 @@ document.getElementById("year").textContent = new Date().getFullYear();
     try {
       var url = new URL(a.href, location.href);
       if (url.origin === location.origin && url.pathname !== location.pathname) {
-        sessionStorage.setItem("skipLoader", "1");
+        sessionStorage.setItem("skipLoaderAt", String(Date.now()));
       }
     } catch (err) {}
   });
 
-  // Coming back from Projects, Certificates, or Experience: skip the loader
+  // Coming back from my own pages: skip
   if (document.documentElement.classList.contains("no-loader")) {
     loader.remove();
     return;
   }
 
   var MIN_TIME = 3000;
-  var start = Date.now();
   document.body.classList.add("is-loading");
 
-  function closeLoader() {
-    var wait = Math.max(0, MIN_TIME - (Date.now() - start));
-    setTimeout(function () {
-      loader.classList.add("hide");
-      document.body.classList.remove("is-loading");
-      setTimeout(function () { loader.remove(); }, 600);
-    }, wait);
+  function run() {
+    var start = Date.now();
+    function closeLoader() {
+      var wait = Math.max(0, MIN_TIME - (Date.now() - start));
+      setTimeout(function () {
+        loader.classList.add("hide");
+        document.body.classList.remove("is-loading");
+        setTimeout(function () { loader.remove(); }, 600);
+      }, wait);
+    }
+    if (document.readyState === "complete") closeLoader();
+    else window.addEventListener("load", closeLoader);
   }
 
-  if (document.readyState === "complete") closeLoader();
-  else window.addEventListener("load", closeLoader);
+  // If the app pre-loaded the page in the background, start when it is really shown
+  if (document.prerendering) {
+    document.addEventListener("prerenderingchange", run, { once: true });
+  } else if (document.visibilityState === "hidden") {
+    document.addEventListener("visibilitychange", function onVis() {
+      if (document.visibilityState === "visible") {
+        document.removeEventListener("visibilitychange", onVis);
+        run();
+      }
+    });
+  } else {
+    run();
+  }
 })();
