@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="logo/favicon-project.svg">
   <link rel="stylesheet" href="darkmode.css">
   <title>Projects | Portfolio</title>
 </head>
@@ -28,7 +29,6 @@
     </nav>
   </header>
 
-  <!--Project Image-->
   <main>
     <section class="page-head">
       <h1>My Projects</h1>
@@ -37,92 +37,212 @@
 
     <section class="grid" aria-label="Projects">
 
+      <!-- ===== 1. Personal Website-Portfolio ===== -->
       <article class="card">
-        <div class="thumb"><img src="images-project/projectPorfolio.jpg" alt="Personal Website-Portfolio screenshot"
-            onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true"
-            style="display:none"></i></div>
+        <div class="thumb slider" data-slider>
+          <div class="slides" tabindex="0" aria-label="Project pictures">
+            <img src="images-project/projectPorfolio.jpg" alt="Personal Website-Portfolio screenshot 1">
+            <!-- <img src="images-project/projectPorfolio2.jpg" alt="Personal Website-Portfolio screenshot 2"> -->
+            <!-- <img src="images-project/projectPorfolio3.jpg" alt="Personal Website-Portfolio screenshot 3"> -->
+          </div>
+          <button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="dots"></div>
+        </div>
         <div class="card-body">
           <h2>Personal Website-Portfolio</h2>
-          <strong>Personal Project | 2026</strong>
-          <p>This portfolio showcases my skills, projects, and knowledge developed through self-study and personal
-            learning.
-            All designs and content are my own creations as 3rd year, BSIT student .</p>
-          <strong>Disclaimer!!!</strong>
-          <p>The information presented is based on reflects my current skills and learning experience and does not
-            necessarily represent formal professional work experience.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          <strong class="meta">Personal Project | 2026</strong>
+          <p class="summary">This portfolio showcases my skills, projects, and knowledge developed through self-study and personal learning.</p>
+          <button class="read-more" type="button">View full description <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+
+          <!-- Full description (shown in the popup) -->
+          <div class="project-details" hidden>
+            <p>This personal portfolio website introduces who I am, my education, technical skills, services, and the projects I have built. I designed and coded it myself with HTML, CSS, and JavaScript as a 3rd-year BSIT student, and I keep improving it as I learn.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Responsive layout for phone, tablet, and desktop</li>
+              <li>Light and dark mode with a saved theme choice</li>
+              <li>Typing animation, loading screen, and downloadable resume</li>
+              <li>Separate pages for projects, certificates, and experiences</li>
+            </ul>
+            <p class="disclaimer"><strong>Disclaimer!!!</strong> The information presented reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
+          </div>
+
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+
+          <div class="card-actions">
+            <a class="btn-link btn-outline" href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+            <a class="btn-link btn-fill" href="https://aydenworkdev.github.io/myportfolio-allen/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
           </div>
         </div>
       </article>
 
+      <!-- ===== 2. Income & Expenses Tracker ===== -->
       <article class="card">
-        <div class="thumb"><img src="images-project/Queuing TP.jpg" alt="Queue Activity screenshot"
-            onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true"
-            style="display:none"></i></div>
+        <div class="thumb slider" data-slider>
+          <div class="slides" tabindex="0" aria-label="Project pictures">
+            <img src="images-project/OnlineAlkansya1.jpg" alt="Income & Expenses Tracker screenshot 1">
+            <img src="images-project/OnlineAlkansya2.jpg" alt="Income & Expenses Tracker screenshot 2">
+           
+          </div>
+          <button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="dots"></div>
+        </div>
+        <div class="card-body">
+          <h2>Income & Expenses Tracker (Online Alkansya)</h2>
+          <strong class="meta">Personal Project | 2026</strong>
+          <p class="summary">A frontend-only tracker where users record income and expenses and set savings goals.</p>
+          <button class="read-more" type="button">View full description <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+
+          <div class="project-details" hidden>
+            <p>OnlineAlkansya is a frontend-only expenses and income tracker. Users can sign up, log in, record income and expenses, track salary, and set savings goals. Everything is saved in the browser, so no backend or database is needed.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Sign up and log in</li>
+              <li>Record income and expenses</li>
+              <li>Salary tracking</li>
+              <li>Savings goals</li>
+              <li>Data saved in the browser (no backend)</li>
+            </ul>
+            <p class="disclaimer"><strong>Disclaimer!!</strong> The Income & Expenses Tracker reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
+          </div>
+
+          <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">CSS</span></div>
+
+          <div class="card-actions">
+            <a class="btn-link btn-outline" href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+            <a class="btn-link btn-fill" href="https://aydenworkdev.github.io/OnlineAlkansya/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== 3. Basic Queuing ===== -->
+      <article class="card">
+        <div class="thumb slider" data-slider>
+          <div class="slides" tabindex="0" aria-label="Project pictures">
+            <img src="images-project/Queuing TP.jpg" alt="Basic Queuing screenshot 1">
+            <!--
+            <img src="images-project/Queuing TP 2.jpg" alt="Basic Queuing screenshot 2">
+            -->
+          </div>
+          <button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="dots"></div>
+        </div>
         <div class="card-body">
           <h2>Basic Queuing</h2>
-          <strong>Academic Project | 2026</strong>
-          <p>We do this for practical task performance for school laboratory work, this application demonstrates the
-            fundamental principles of data structures and process management.
-            using a First-In, First-Out (FIFO) logic model</p>
-          <strong>Disclaimer!!</strong>
-          <p>This Activity was developed as part of school activities for educational purposes only. All information and
-            content are for academic purposes.</p>
-          <div class="tags"><span class="tag">C#</span><span class="tag">.NET-Windows Form</span>
-          </div>
-      </article>
+          <strong class="meta">Academic Project | 2026</strong>
+          <p class="summary">A school laboratory application that demonstrates a First-In, First-Out (FIFO) queue.</p>
+          <button class="read-more" type="button">View full description <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
 
-      <!--       
-      <article class="card">
-        <div class="thumb"><img src="images-project/" alt="Login and Signup Forms screenshot" onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-laptop-code" aria-hidden="true" style="display:none"></i></div>
-        <div class="card-body">
-          <h2>Login and Signup Forms</h2>
-          <strong>Personal Project | 2026</strong>
-          <p>This Project its my own creation by on my skills and learning about SQL and C# windows forms Application</p>
-          <strong>Disclaimer!!</strong>
-          <p>The Login and Signup is  presented is based on reflects my current skills and learning experience and does not necessarily represent formal professional work experience.</p>
-          <div class="tags"><span class="tag">C#</span><span class="tag">.NET (Windows Form)</span><span class="tag">SQL</span>
+          <div class="project-details" hidden>
+          
+            <p>We built this for a practical task in a school laboratory. The application demonstrates the fundamental principles of data structures and process management using a First-In, First-Out (FIFO) logic model, where the first number added to the queue is the first one served.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Queue numbers served in the order they were issued (FIFO)</li>
+              <li>A "Now Serving" display for the current number</li>
+              <li>A cashier window that shows the position in the queue</li>
+            </ul>
+            <p class="disclaimer"><strong>Disclaimer!!</strong> This activity was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          </div>
+
+          <div class="tags"><span class="tag">C#</span><span class="tag">.NET-Windows Form</span></div>
+
+          <div class="card-actions">
+            <span class="btn-link btn-disabled" aria-disabled="true"><i class="fa-solid fa-ban" aria-hidden="true"></i> No live Demo</span>
+          </div>
         </div>
       </article>
-       -->
 
+      <!-- ===== 4. Shoe Store Web-Design ===== -->
       <article class="card">
-        <div class="thumb"><img src="images-project/Shoe Store Website-Design.jpg"
-            alt="Shoe Store Website Design screenshot" onerror="this.parentElement.classList.add('fallback')"><i
-            class="fa-solid fa-shoe-prints" aria-hidden="true" style="display:none"></i></div>
+        <div class="thumb slider" data-slider>
+          <div class="slides" tabindex="0" aria-label="Project pictures">
+            <img src="images-project/Shoe Store Website-Design.jpg" alt="Shoe Store Website Design screenshot 1">
+            <!--
+            <img src="images-project/Shoe Store 2.jpg" alt="Shoe Store Website Design screenshot 2">
+            -->
+          </div>
+          <button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="dots"></div>
+        </div>
         <div class="card-body">
           <h2>Shoe Store Web-Design</h2>
-          <strong>Academic Project | 2026</strong>
-          <p>A shoe store website showcasing different styles of footwear through a simple and user-friendly design.</p>
-          <strong>Disclaimer!!</strong>
-          <p>This Shoe Store website design was developed as part of school activities for educational purposes only.
-            All information and content are for academic purposes.</p>
+          <strong class="meta">Academic Project | 2026</strong>
+          <p class="summary">A shoe store website design showcasing different styles of footwear.</p>
+          <button class="read-more" type="button">View full description <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+
+          <div class="project-details" hidden>
+            <p>A shoe store website design made in Figma. It showcases different styles of footwear through a simple and user-friendly layout, with a featured product banner and a clear call-to-action button.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Featured shoe banner on the home screen</li>
+              <li>Simple navigation by category</li>
+              <li>"Buy Now" call-to-action</li>
+            </ul>
+            <p class="disclaimer"><strong>Disclaimer!!</strong> This Shoe Store website design was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          </div>
+
           <div class="tags"><span class="tag">Figma</span></div>
+
+          <div class="card-actions">
+            <span class="btn-link btn-disabled" aria-disabled="true"><i class="fa-solid fa-ban" aria-hidden="true"></i> No live Demo</span>
+          </div>
         </div>
       </article>
 
+      <!-- ===== 5. PC Store Web-Design ===== -->
       <article class="card">
-        <div class="thumb"><img src="images-project/PC-Store.jpg" alt="PC Store Website Design screenshot"
-            onerror="this.parentElement.classList.add('fallback')"><i class="fa-solid fa-desktop" aria-hidden="true"
-            style="display:none"></i></div>
+        <div class="thumb slider" data-slider>
+          <div class="slides" tabindex="0" aria-label="Project pictures">
+            <img src="images-project/PC-Store.jpg" alt="PC Store Website Design screenshot 1">
+            <!--
+            <img src="images-project/PC-Store2.jpg" alt="PC Store Website Design screenshot 2">
+            -->
+          </div>
+          <button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="dots"></div>
+        </div>
         <div class="card-body">
           <h2>PC Store Web-Design</h2>
-          <strong>Academic Project | 2026</strong>
-          <p>PC Store website showcasing computer parts, accessories, and PC builds as part of an academic project.</p>
-          <strong>Disclaimer!!</strong>
-          <p>This PC store website design was developed as part of school activities for educational purposes only.
-            All information and content are for academic purposes.</p>
+          <strong class="meta">Academic Project | 2026</strong>
+          <p class="summary">A PC store website design showcasing computer parts, accessories, and PC builds.</p>
+          <button class="read-more" type="button">View full description <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+
+          <div class="project-details" hidden>
+            <p>A PC store website design made in Figma as an academic project. It showcases computer parts, accessories, and PC builds in a clean layout that is easy to browse.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Sections for computer parts, accessories, and PC builds</li>
+              <li>Clean, easy-to-browse layout</li>
+            </ul>
+            <p class="disclaimer"><strong>Disclaimer!!</strong> This PC store website design was developed as part of school activities for educational purposes only. All information and content are for academic purposes.</p>
+          </div>
+
           <div class="tags"><span class="tag">Figma</span></div>
+
+          <div class="card-actions">
+            <span class="btn-link btn-disabled" aria-disabled="true"><i class="fa-solid fa-ban" aria-hidden="true"></i> No live Demo</span>
+          </div>
         </div>
       </article>
 
     </section> <!--End of the section-->
 
-    <!-- Button to Back-->
     <div class="actions">
       <a href="index.html" class="btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home</a>
     </div>
   </main>
+
+  <!-- ===== Project popup ===== -->
+  <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <div class="modal-inner" id="modalContent"></div>
+  </dialog>
 
   <!--Footer-->
   <footer class="site-footer">
@@ -134,20 +254,17 @@
       <li><a href="experience.html">Experiences</a></li>
     </ul>
     <div class="social">
-      <a href="https://www.facebook.com/crslln" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-          class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer"
-        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
-          class="fa-brands fa-github"></i></a>
+      <a href="https://www.facebook.com/crslln" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/https.cccrrrsss" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/AydenWorkDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
     </div>
     <div class="copy">
-      </p> © <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.<p>
+      <p>© <span id="year"></span> Cris Allen | AydenWorkDev. All Rights Reserved.</p>
     </div>
-  </footer> 
+  </footer>
 
 
-<!--CSS-->   
+<!--CSS-->
 <style>
     :root {
       --bg: #f8fafc;
@@ -160,8 +277,7 @@
       --brand-soft: #eff6ff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { 
-        scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
       background: var(--bg);
@@ -175,11 +291,11 @@
     :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
 
     /* Light scrollbar */
-     html { color-scheme: light; scrollbar-color: #cbd5e1 #f1f5f9; }
-     ::-webkit-scrollbar { width: 10px; }
-     ::-webkit-scrollbar-track { background: #f1f5f9; }
-     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 30px; }
-     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    html { color-scheme: light; scrollbar-color: #cbd5e1 #f1f5f9; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 30px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
     /* Header */
     .site-header {
@@ -194,8 +310,8 @@
     }
     .logo { font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em; color: var(--brand); }
     .nav ul { display: flex; gap: 28px; list-style: none; }
-    .nav ul a { font-size: .95rem; font-weight: 500; color: var(--muted); padding: 6px 0; transition: color .2s;}
-    .nav ul a:hover, .nav ul a[aria-current="page"] {color: var(--brand); }
+    .nav ul a { font-size: .95rem; font-weight: 500; color: var(--muted); padding: 6px 0; transition: color .2s; }
+    .nav ul a:hover, .nav ul a[aria-current="page"] { color: var(--brand); }
 
     /* Hero */
     .page-head { text-align: center; padding: 72px 24px 40px; max-width: 720px; margin: 0 auto; color: var(--brand); }
@@ -205,7 +321,7 @@
     /* Grid */
     main { flex: 1; }
     .grid {
-      max-width: 1120px; margin: 0 auto; padding: 24px 24px 24px;
+      max-width: 1120px; margin: 0 auto; padding: 24px;
       display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;
     }
     .card {
@@ -215,6 +331,7 @@
       overflow: hidden;
       display: flex; flex-direction: column;
       box-shadow: 0 1px 2px rgba(15,23,42,.04);
+      cursor: pointer;
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
     .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(37,99,235,.25); border-color: #bfdbfe; }
@@ -227,17 +344,131 @@
       overflow: hidden;
     }
     .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .thumb.fallback img { display: none; }
 
     .card-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
     .card-body h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; }
     .card-body p { color: var(--muted); font-size: .95rem; }
+
+    .read-more {
+      align-self: flex-start;
+      background: none; border: 0; padding: 0;
+      font: inherit; font-size: .9rem; font-weight: 600;
+      color: var(--brand); cursor: pointer;
+    }
+    .read-more i { margin-left: 6px; transition: transform .2s; }
+    .read-more:hover i { transform: translateX(4px); }
+
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
     .tag {
       font-size: .8rem; font-weight: 600; color: var(--brand-dark);
       background: var(--brand-soft); border: 1px solid #dbeafe;
-      padding: 6px 16px; border-radius: 999px;
+      padding: 6px 16px; border-radius: 20px;
     }
+
+    /* Picture slider */
+    .thumb.slider { position: relative; display: block; }
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .slides::-webkit-scrollbar { display: none; }
+    .slides { cursor: grab; }
+    .slides img { flex: 0 0 100%; scroll-snap-align: center; user-select: none; -webkit-user-drag: none; }
+    .slides:focus-visible { outline-offset: -3px; }
+
+    .slide-btn {
+      position: absolute; top: 50%;
+      width: 36px; height: 36px;
+      transform: translateY(-50%);
+      display: grid; place-items: center;
+      border: 0; border-radius: 50%;
+      background: rgba(15, 23, 42, .6);
+      color: #fff; font-size: .9rem;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity .2s, background .2s;
+    }
+    .slide-btn.prev { left: 10px; }
+    .slide-btn.next { right: 10px; }
+    .slide-btn:hover { background: rgba(37, 99, 235, .9); }
+    .slider:hover .slide-btn,
+    .slide-btn:focus-visible { opacity: 1; }
+    @media (hover: none) { .slide-btn { opacity: 1; } }
+
+    .dots {
+      position: absolute; left: 0; right: 0; bottom: 10px;
+      display: flex; justify-content: center; gap: 6px;
+    }
+    .dot {
+      width: 8px; height: 8px; padding: 0;
+      border: 0; border-radius: 50%;
+      background: rgba(255, 255, 255, .55);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, .25);
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .dot.active { background: #fff; transform: scale(1.3); }
+    .slide-btn[hidden], .dots[hidden] { display: none; }
+
+    /* On the cards: show only the first picture, no arrows/dots, no Source/Live buttons.
+       Everything is available inside the popup after clicking the card. */
+    .card .slides { overflow: hidden; pointer-events: none; }
+    .card .slide-btn,
+    .card .dots,
+    .card .card-actions { display: none; }
+
+    /* Project popup */
+    .modal {
+      border: 0; padding: 0; margin: auto;
+      width: min(760px, calc(100% - 32px));
+      max-height: calc(100dvh - 32px);
+      border-radius: 16px;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 24px 64px rgba(2, 6, 23, .45);
+      overflow: hidden;
+    }
+    .modal::backdrop { background: rgba(2, 6, 23, .65); backdrop-filter: blur(2px); }
+    .modal[open] { animation: modalIn .25s ease; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+
+    .modal-inner { max-height: calc(100dvh - 32px); overflow-y: auto; }
+    .modal-close {
+      position: absolute; top: 12px; right: 12px; z-index: 5;
+      width: 38px; height: 38px;
+      display: grid; place-items: center;
+      border: 0; border-radius: 50%;
+      background: rgba(15, 23, 42, .65); color: #fff;
+      font-size: 1rem; cursor: pointer;
+      transition: background .2s;
+    }
+    .modal-close:hover { background: var(--brand); }
+
+    .modal .thumb { aspect-ratio: 16 / 9; cursor: default; }
+    .modal .slides img { object-fit: contain; background: var(--bg); }
+    .modal .slide-btn { opacity: 1; }
+
+    .modal-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+    .modal-body h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.25; padding-right: 36px; }
+    .modal-text { display: flex; flex-direction: column; gap: 12px; }
+    .modal-text p, .modal-text li { color: var(--muted); font-size: .95rem; }
+    .modal-text h3 { font-size: 1rem; font-weight: 700; margin-top: 4px; }
+    .modal-text ul { padding-left: 20px; display: grid; gap: 4px; }
+    .modal-text .disclaimer {
+      padding: 12px 16px;
+      border-left: 3px solid var(--brand);
+      background: var(--brand-soft);
+      border-radius: 0 10px 10px 0;
+    }
+    .modal-text .disclaimer strong { color: var(--ink); }
+    .modal-body .tags { margin-top: 4px; }
+
+    body.modal-open { overflow: hidden; }
 
     /* Back button */
     .actions { max-width: 1120px; margin: 0 auto; padding: 24px 24px 72px; }
@@ -251,6 +482,23 @@
     .btn:hover { background: var(--brand-dark); }
     .btn i { transition: transform .2s; }
     .btn:hover i { transform: translateX(-3px); }
+
+    .card-actions { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
+    .btn-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 20px;
+      font-size: .8rem; font-weight: 600; border: 1px solid var(--brand);
+      transition: background .2s, color .2s, transform .2s;
+    }
+    .btn-link:hover { transform: translateY(-2px); }
+
+    .btn-fill { background: var(--brand); color: #fff; }
+    .btn-fill:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+    .btn-outline { background: transparent; color: var(--brand); }
+    .btn-outline:hover { background: var(--brand); color: #fff; }
+
+    .btn-disabled { opacity: .5; cursor: not-allowed; border-color: var(--line); color: var(--muted); }
+    .btn-disabled:hover { transform: none; }
 
     /* Footer */
     .site-footer { background: var(--surface); border-top: 1px solid var(--line); padding: 48px 24px 32px; text-align: center; }
@@ -268,83 +516,245 @@
     .copy { color: var(--muted); font-size: .875rem; }
 
     /* menu ☰ */
-  .menu-toggle {
-  display: none;
-  background: none;
-  border: 0;
-  font-size: 1.4rem;
-  color: var(--brand);
-  cursor: pointer;
-  padding: 6px 10px;
-}
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 1.4rem;
+      color: var(--brand);
+      cursor: pointer;
+      padding: 6px 10px;
+    }
 
-@media (max-width: 700px) {
-  .menu-toggle { display: block; }
+    @media (max-width: 700px) {
+      .menu-toggle { display: block; }
+      .nav { position: relative; }
+      .nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+        padding: 8px 24px 16px;
+      }
+      .nav ul.open { display: flex; }
+      .nav ul a { display: block; padding: 12px 0; }
+      .page-head { padding-top: 48px; }
 
-  .nav { position: relative; }
-
-  .nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: 0;
-    background: var(--surface);
-    border-bottom: 1px solid var(--line);
-    padding: 8px 24px 16px;
-  }
-
-  .nav ul.open { display: flex; }
-  .nav ul a { display: block; padding: 12px 0; }
-  .page-head { padding-top: 48px; }
-}
+      .modal { width: calc(100% - 20px); max-height: calc(100dvh - 20px); border-radius: 14px; }
+      .modal-inner { max-height: calc(100dvh - 20px); }
+      .modal-body { padding: 20px; }
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; scroll-behavior: auto !important; }
+      * { transition: none !important; scroll-behavior: auto !important; animation: none !important; }
     }
   </style>
-        
 
 
  <!--JavaScript-->
   <script>
-    // Show an icon placeholder when a screenshot is missing
-    document.querySelectorAll('.thumb').forEach(function (t) {
-      var img = t.querySelector('img');
-      var icon = t.querySelector('i');
-      function check() { icon.style.display = t.classList.contains('fallback') ? 'block' : 'none'; }
-      new MutationObserver(check).observe(t, { attributes: true, attributeFilter: ['class'] });
-      if (img.complete && img.naturalWidth === 0) t.classList.add('fallback');
-      check();
+    // ===== Picture slider (used by the cards and by the popup) =====
+    function initSlider(s) {
+      var track = s.querySelector('.slides');
+      var imgs = track.querySelectorAll('img');
+      var prev = s.querySelector('.prev');
+      var next = s.querySelector('.next');
+      var dotsBox = s.querySelector('.dots');
+
+      // Only one picture: hide the controls
+      if (imgs.length < 2) {
+        prev.hidden = true; next.hidden = true; dotsBox.hidden = true;
+        return;
+      }
+
+      var dots = [];
+      imgs.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'dot';
+        d.setAttribute('aria-label', 'Go to picture ' + (i + 1));
+        d.addEventListener('click', function () { go(i); });
+        dotsBox.appendChild(d);
+        dots.push(d);
+      });
+
+      function current() { return Math.round(track.scrollLeft / track.clientWidth) || 0; }
+
+      function go(i) {
+        i = (i + imgs.length) % imgs.length;   // loops around at both ends
+        track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      }
+
+      function update() {
+        var c = current();
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === c); });
+      }
+
+      prev.addEventListener('click', function () { go(current() - 1); });
+      next.addEventListener('click', function () { go(current() + 1); });
+      track.addEventListener('scroll', update, { passive: true });
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); go(current() - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+      });
+
+      // Drag with the mouse on a computer (touch screens already swipe)
+      var down = false, moved = false, startX = 0, startLeft = 0;
+
+      track.addEventListener('pointerdown', function (e) {
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
+        down = true; moved = false;
+        startX = e.clientX; startLeft = track.scrollLeft;
+        track.style.scrollSnapType = 'none';
+        track.style.cursor = 'grabbing';
+        track.setPointerCapture(e.pointerId);
+      });
+
+      track.addEventListener('pointermove', function (e) {
+        if (!down) return;
+        var dx = e.clientX - startX;
+        if (Math.abs(dx) > 5) moved = true;
+        track.scrollLeft = startLeft - dx;
+      });
+
+      function endDrag() {
+        if (!down) return;
+        down = false;
+        track.style.cursor = '';
+        track.style.scrollSnapType = '';
+        go(Math.round(track.scrollLeft / track.clientWidth));
+      }
+      track.addEventListener('pointerup', endDrag);
+      track.addEventListener('pointercancel', endDrag);
+
+      // A drag should not count as a click (it would open the popup)
+      track.addEventListener('click', function (e) {
+        if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; }
+      }, true);
+
+      track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+      update();
+    }
+
+    // ===== Project popup =====
+    var modal = document.getElementById('projectModal');
+    var modalContent = document.getElementById('modalContent');
+
+    function openProject(card) {
+      modalContent.innerHTML = '';
+
+      // Pictures
+      var details = card.querySelector('.project-details');
+      var imgs = Array.prototype.slice.call(card.querySelectorAll('.slides img'));
+      // Extra pictures that only appear in the popup
+      if (details) {
+        imgs = imgs.concat(Array.prototype.slice.call(details.querySelectorAll('.more-pictures img')));
+      }
+      var gallery = null;
+      if (imgs.length) {
+        gallery = document.createElement('div');
+        gallery.className = 'thumb slider';
+        gallery.innerHTML =
+          '<div class="slides" tabindex="0" aria-label="Project pictures"></div>' +
+          '<button class="slide-btn prev" type="button" aria-label="Previous picture"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>' +
+          '<button class="slide-btn next" type="button" aria-label="Next picture"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>' +
+          '<div class="dots"></div>';
+        var track = gallery.querySelector('.slides');
+        imgs.forEach(function (im) {
+          var c = document.createElement('img');
+          c.src = im.getAttribute('src');
+          c.alt = im.alt;
+          track.appendChild(c);
+        });
+        modalContent.appendChild(gallery);
+      }
+
+      // Text
+      var body = document.createElement('div');
+      body.className = 'modal-body';
+
+      var title = document.createElement('h2');
+      title.id = 'modalTitle';
+      title.textContent = card.querySelector('h2').textContent;
+      body.appendChild(title);
+
+      var meta = card.querySelector('.meta');
+      if (meta) body.appendChild(meta.cloneNode(true));
+
+      var text = document.createElement('div');
+      text.className = 'modal-text';
+      text.innerHTML = details ? details.innerHTML : '<p>' + card.querySelector('.summary').textContent + '</p>';
+      var extraBox = text.querySelector('.more-pictures');
+      if (extraBox) extraBox.remove();
+      body.appendChild(text);
+
+      var tags = card.querySelector('.tags');
+      if (tags) body.appendChild(tags.cloneNode(true));
+
+      var actions = card.querySelector('.card-actions');
+      if (actions) body.appendChild(actions.cloneNode(true));
+
+      modalContent.appendChild(body);
+
+      document.body.classList.add('modal-open');
+      modal.showModal();
+      modalContent.scrollTop = 0;
+      if (gallery) initSlider(gallery);
+    }
+
+    // Click anywhere on a card (except links and buttons)
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('a, button, .card-actions')) return;
+        openProject(card);
+      });
+    });
+
+    // "View full description" button (keyboard friendly)
+    document.querySelectorAll('.read-more').forEach(function (btn) {
+      btn.addEventListener('click', function () { openProject(btn.closest('.card')); });
+    });
+
+    // Close: X button, click outside, Esc key
+    document.getElementById('modalClose').addEventListener('click', function () { modal.close(); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+    modal.addEventListener('close', function () {
+      document.body.classList.remove('modal-open');
+      modalContent.innerHTML = '';
     });
 
     // Every year change the year on Copyright
     document.getElementById("year").textContent = new Date().getFullYear();
 
-     // Mobile menu
-  var menuToggle = document.getElementById("menuToggle");
-  var navLinks = document.getElementById("navLinks");
+    // Mobile menu
+    var menuToggle = document.getElementById("menuToggle");
+    var navLinks = document.getElementById("navLinks");
 
-  menuToggle.addEventListener("click", function () {
-    var isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
+    menuToggle.addEventListener("click", function () {
+      var isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
 
-  // Highlight the link of the page you are on
-  var currentPage = location.pathname.split("/").pop() || "index.html";
+    // Highlight the link of the page you are on
+    var currentPage = location.pathname.split("/").pop() || "index.html";
 
-  document.querySelectorAll("#navLinks a").forEach(function (link) {
-    if (link.getAttribute("href") === currentPage) {
-      link.setAttribute("aria-current", "page");
-    }
-  });
-   
-   (function () {
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      if (link.getAttribute("href") === currentPage) {
+        link.setAttribute("aria-current", "page");
+      }
+    });
+
+    // Theme (saved choice or system)
+    (function () {
       try {
         var saved = localStorage.getItem("theme");
         var system = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
